@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 0px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+
+.login-form {
+    max-width: 400px;
+    margin: 0px auto;
+    padding: 30px;
+    
+}
+
+.login-form h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.login-form p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+    font-size: 16px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 38px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: flex;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-form .form-group {
+    margin-bottom: 15px;
+}
+
+.error-msg {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.terms input {
+    margin-right: 10px;
+}
+
+.terms a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+.continue-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #231F87;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.continue-btn:hover {
+    background-color: #0c0885;
+}
+
+.login-form .links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a {
+    color: #3498db;
+    text-decoration: none;
+    display: flex;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.links span {
+    display: flex;
+   
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .continue-btn {
+        padding: 10px;
+    }
+}
+

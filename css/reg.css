@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 0px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px; /* Adjust based on your design */
+}
+
+
+
+@media (max-width: 500px) {
+    .login-container {
+        padding: 10px;
+    }
+}
+
+
+.register-form h1 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.register-form p {
+    margin: 0 0 20px;
+    color: #555;
+    text-align: center;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="file"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.password-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.password-container > div {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.password-container > div:last-child {
+    margin-right: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: #f9f9f9;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+input[type="file"] {
+    padding: 5px;
+}
+
+.terms {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.terms input {
+    margin-right: 10px;
+}
+
+.terms a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+.buttons {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+
+}
+
+.cancel-btn,.back-btn,
+.submit-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+.submit-btn {
+    background-color: #231F87;
+    color: #fff;
+}
+
+.back-btn {
+    background-color: #0c0885;
+    color: #fff;
+    text-decoration: none;
+}
+
+.submit-btn:hover {
+    background-color: #231F87;
+}
+
+.back-btn:hover {
+    background-color: #0c0885;
+}
+
+.cancel-btn:hover {
+    background-color: #b3b3b3;
+}
+
+@media (max-width: 600px) {
+    .password-container {
+        flex-direction: column;
+    }
+
+    .password-container > div {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

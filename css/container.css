@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #e4e3e3;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #ffffff; /* Match card background */
+    width: 70%; /* Set width for desktop */
+    min-height: 100vh; /* Ensure full viewport height */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.container-table {
+    margin-top: 50px;
+}
+.table th, .table td {
+    text-align: center;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-container {
+        width: 100%;
+        padding: 0; /* Remove padding for mobile */
+        box-shadow: none; /* Remove box-shadow */
+        border-radius: 0; /* Remove border-radius */
+    }
+}

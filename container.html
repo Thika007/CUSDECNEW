@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/container.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container container-table">
+            <h2 class="text-center">Containers Details</h2>
+            <div class="table-responsive-md">
+                <table style="background-color: rgb(253, 253, 251);" class="table" id="operationTable">
+                    <thead>
+                        <tr>
+                            <th>Container Number</th>
+                            <th>Destination</th>
+                            <th>Scanned</th>
+                            <th>Last Container Location</th>
+                            <th>Last Update Date</th>
+                            <th>Last Update Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Operation rows will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p class="home"><button class="w3-button w3-deep-purple" id="homeButton">Home</button>
+            <button class="w3-button w3-blue" id="backButton">Back</button>
+        </p>
+    </div>
+    <script>
+        document.getElementById('homeButton').addEventListener('click', function () {
+            // Redirect to index.html
+            window.location.href = 'index.html'; // Change this to your actual home page URL
+        });
+
+        document.getElementById('backButton').addEventListener('click', function () {
+            window.history.back(); // Go back to the previous page
+        });
+    </script>
+    <script src="js/container.js"></script>
+</body>
+
+</html>

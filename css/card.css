@@ -1,0 +1,208 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #e4e3e3;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #ffffff; /* Match card background */
+    width: 70%; /* Set width for desktop */
+    min-height: 100vh; /* Ensure full viewport height */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 540px;
+    margin-right: 10px;
+}
+
+.search-button {
+    background-color: #bdf2ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+ /* Style for the filter search bar */
+ #filterBar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    animation: slideDown 1s ease-in-out;
+}
+
+.card-wrapper {
+    width: 50%;
+    padding: 12px;
+    box-sizing: border-box;
+    animation: slideDown 1s ease-in-out;
+    animation-fill-mode: both;
+}
+
+.card {
+    display: block;
+    position: relative;
+    background-color: #f2f8f9;
+    border-radius: 10px;
+    padding: 2em 1.2em;
+    margin-top: 15px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #f5feff, #d9d9d9);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: transform 0.35s ease;
+    max-width: 580px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: #262626;
+    font-size: 1.5em;
+    line-height: normal;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.small-desc {
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.5em;
+    color: #452c2c;
+}
+
+/* .go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, #6293c8, #384c6c);
+    border-radius: 0 4px 0 32px;
+} */
+
+/* .go-arrow {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: white;
+    font-family: courier, sans;
+} */
+
+/* .card:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: linear-gradient(135deg, #364a60, #384c6c);
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.35s ease-out;
+} */
+
+/* .card:hover:before {
+    transform: scale(58);
+}
+
+.card:hover .small-desc {
+    transition: all 0.5s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card:hover .card-title {
+    transition: all 0.5s ease-out;
+    color: #ffffff;
+} */
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-container {
+        width: 100%;
+        padding: 0; /* Remove padding for mobile */
+        box-shadow: none; /* Remove box-shadow */
+        border-radius: 0; /* Remove border-radius */
+    }
+    
+    .card-wrapper {
+        width: 100%; /* Full width on mobile */
+        padding: 10px; /* Smaller padding for mobile */
+    }
+
+    .search-input {
+        width: 90%; /* Make search input full width on mobile */
+        margin-right: 0;
+    }
+
+    .search-button {
+        width: 90%;
+        margin-top: 10px; /* Add margin to separate button from input */
+    }
+}

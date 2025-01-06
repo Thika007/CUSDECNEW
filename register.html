@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register New User</title>
+    <link rel="stylesheet" href="Css/reg.css">
+    <link rel="icon" href="img/cusdec.png" type="image/png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="register-form">
+            <div class="logo-container">
+                <img src="img/cusdec.png" alt="Logo">
+            </div>
+            <h1>Register new user</h1>
+            <p style="text-align: center;">You may add all the TIN numbers which requires access to.</p>
+            <form id="registerForm">
+                <label for="first-id">First Name*</label>
+                <input type="text" id="first-Name" name="first-Name" required>
+                <label for="last-Name">Last Name*</label>
+                <input type="text" id="last-Name" name="last-Name" required>
+                <label for="NIC">NIC*</label>
+                <input type="text" id="NIC" name="NIC" required>
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
+                <label for="user-Name">User Name*</label>
+                <input type="text" id="user-Name" name="user-Name" required>
+                <div class="password-container">
+                    <div>
+                        <label for="password">Password*</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div>
+                        <label for="re-password">Re-enter Password*</label>
+                        <input type="password" id="re-password" name="re-password" required>
+                    </div>
+                </div>
+                <br>
+                <p style="text-align: center;">Your request will be forwarded to Sri Lanka Customs. Account creation
+                    will proceed upon approval of the documents submitted by you.</p>
+                <div class="terms">
+                    <div class="terms">
+                        <input class="terms" type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I Agree to <a href="#">Terms & Conditions</a></label>
+                    </div>
+                    <div class="buttons">
+                        <a href="login.html"><button type="button" class="cancel-btn">Cancel</button></a>
+                        <a href="login.html"></a><button type="submit" class="submit-btn">Submit</button></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/register.js"></script>
+</body>
+
+</html>

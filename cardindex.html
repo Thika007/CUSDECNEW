@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card Layout</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/card.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1 style="text-align: center;">Enter The Consignee TIN Number</h1>
+            <div class="input-group mb-3">
+                <input type="text" id="searchBar" class="form-control" placeholder="Enter Consignee TIN">
+                <div class="input-group-append">
+                    <button id="searchButton" type="button" class="btn">
+                        <strong>SEARCH</strong>
+                        <div id="container-stars">
+                            <div id="stars"></div>
+                        </div>
+                        <div id="glow">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="spinner-border text-primary" role="status" id="loadingSpinner" style="display: none;">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div id="errorAlert" class="alert alert-danger" role="alert" style="display: none;"> Error fetching data.
+                Please try again. </div>
+            <!-- New Filter Search Bar -->
+            <div id="filterContainer" style="display: none;">
+                <input type="text" id="filterBar" class="form-control" placeholder="Filter results...">
+            </div>
+            <div class="card-container" id="cardContainer">
+                <!-- Cards will be inserted here -->
+            </div>
+        </div>
+    </div>
+    <script src="js/scriptCard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owner.css"> <!-- Your custom CSS file -->
+    <link rel="icon" href="img/cusdec.png" type="image/png">
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container">
+        <h1 class="text-center" style="margin-top: 20px;">CUSDEC Ownership Verification</h1>
+        <!-- Exporter and Declarant Details -->
+        <div class="container">
+            <div class="table-responsive mb-4">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td data-label="cusdec no" style="font-weight: bold;">CUSDEC No</td>
+                            <td id="cusdecNO" data-label="cusdec no"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Exporter" style="font-weight: bold;">Exporter</td>
+                            <td id="exporterName" data-label="Exporter Name"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Declarant" style="font-weight: bold;">Declarant</td>
+                            <td id="declarantName" data-label="Declarant Name"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Invoice Value" style="font-weight: bold;">Invoice Value</td>
+                            <td>LKR <span id="invoiceValue" data-label="Invoice Amount"></span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="B/L Number" style="font-weight: bold;">B/L Number</td>
+                            <td>Currently Under Maintenance</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Country of Export" style="font-weight: bold;">Country of Export(CODE)</td>
+                            <td id="exportCty" data-label="Export Country"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Terminal" style="font-weight: bold;">Terminal</td>
+                            <td>Currently Under Maintenance</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="B-card">
+                <p style="text-align: center;">Please confirm the ownership of the above consignment.</p>
+                <!-- Buttons Section -->
+                <div class="buttons">
+                    <button id="own" class="btn owner"><span></span>
+                        <p data-text="verify" data-title="I AM THE OWNER" style="font-size: x-small;"></p>
+                    </button>
+                    <button id="nown" class="btn not-owner"><span></span>
+                        <p data-text="verify" data-title="I AM NOT THE OWNER" style="font-size: x-small;"></p>
+                    </button>
+                </div>
+            </div>
+            <!-- List Items Section -->
+            <h1 class="text-center" style="margin-top: 20px;">Items</h1>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>HS Code</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody id="itemsTable">
+                        <!-- Items will be dynamically inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Not Owner Modal -->
+    <div id="notOwnerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header d-flex"> Confirm Not Ownership <i
+                    class="bi bi-exclamation-circle-fill ms-auto fs-2"></i> <!-- Bootstrap Icon -->
+            </div>
+            <div class="modal-body">
+                <p>Sri Lanka Customs will be notified that the CUSDEC <span id="Office_Code"></span>
+                    <span id="Reg_No"></span> of <span id="Reg_Date"></span> is not owned by your company. Please verify
+                    the ownership of the CUSDEC and inform CIU. Legal action may be taken regarding the submission of
+                    the CUSDEC.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="continue">Continue</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/owner.js"></script>
+</body>
+
+</html>
